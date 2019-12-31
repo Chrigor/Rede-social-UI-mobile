@@ -1,15 +1,55 @@
 import React, { Component } from 'react';
-import {Image, StyleSheet, TextInput, KeyboardAvoidingView } from 'react-native';
-
+import { Image, StyleSheet, TextInput, TouchableHighlight, Text, View, Alert, ScrollView } from 'react-native';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 class Login extends Component {
+
+    state = {
+        login: '',
+        password: ''
+    }
+
+    clickLogin = () => {
+        Alert.alert("Clicou login safafo")
+        this.navigateToHome()
+    }
+
+    changeLogin = (text) => {
+        this.setState({ login: text })
+        Alert.alert(this.state.login)
+      
+    }
+
+    changePassword = (text) => {
+        this.setState({ password: text })
+        Alert.alert(this.state.password)
+    }
+
+    navigateToHome = () => {
+        const { navigation } = this.props;
+        navigation.navigate('Home');
+        Alert.alert("ua")
+    }
+
+
     render() {
         return (
-            <KeyboardAvoidingView style={styles.container} behavior="padding">
-                <Image style={styles.logo} source={require("../../assets/logo.png")} />
-                <TextInput style={styles.input} placeholder="Digite seu Login ..."/>
-                <TextInput style={styles.input} placeholder="Digite sua Senha ..." secureTextEntry={true}/>
-            </KeyboardAvoidingView>
+            <ScrollView style={styles.container} behavior="padding">
+                <View style={styles.containerLogin}>
+                    <Image style={styles.logo} source={require("../../assets/logo.png")} />
+                    <View style={styles.containerInput}>
+                        <Icon name="user" color="#5458F7" size={25} style={styles.icon} />
+                        <TextInput style={styles.input} placeholder="Digite seu Login ..." placeholderTextColor="#fff" onChangeText={this.changeLogin} />
+                    </View>
+                    <View style={styles.containerInput}>
+                        <Icon name="chain" color="#5458F7" size={25} style={styles.icon} />
+                        <TextInput style={styles.input} placeholder="Digite sua Senha ..." secureTextEntry={true} placeholderTextColor="#fff" onChangeText={this.changePassword} />
+                    </View>
+                    <TouchableHighlight style={styles.buttonLogin} onPress={this.clickLogin}>
+                        <Text style={styles.textLogin}>Login</Text>
+                    </TouchableHighlight>
+                </View>
+            </ScrollView>
         )
     }
 }
@@ -17,24 +57,60 @@ class Login extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20,
-        alignItems:"center",
-        backgroundColor:"rgba(25, 26, 29, 0.93)",
+        paddingTop: 20,
+        paddingBottom: 20,
+        backgroundColor: "rgba(25, 26, 29, 0.95)",
+    },
+
+    containerLogin: {
+        margin: 20,
+        alignItems: "center",
     },
 
     logo: {
-        height:150,
-        width:210,
+        height: 150,
+        width: 210,
+        marginBottom: 25,
     },
 
     input: {
-        height:50,
-        width:320,
-        padding:10,
+        height: 50,
+        width: 300,
+        paddingRight: 10,
+        paddingLeft: 10,
+        paddingTop: 10,
+        paddingBottom: 2,
         borderRadius: 10,
-        marginBottom:15,
+        marginBottom: 15,
         borderBottomColor: "#fff",
-        borderBottomWidth: 2,
+        borderBottomWidth: 1,
+        color: "#fff"
+    },
+
+    buttonLogin: {
+        width: 340,
+        height: 50,
+        backgroundColor: "#5458F7",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 50,
+        marginTop: 30
+    },
+
+    textLogin: {
+        color: "#fff",
+        fontWeight: "bold",
+        fontSize: 16
+    },
+
+    containerInput: {
+        flexDirection: "row",
+        alignItems: "center",
+        padding: 5,
+    },
+
+    icon: {
+        margin: 10
     }
 })
 
