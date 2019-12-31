@@ -61,27 +61,17 @@ class Home extends Component {
                 <View style={styles.containerBottomPost}>
                     <View style={styles.containerGroupButtons}>
                         <View style={styles.containerButtons}>
-                            <Icon.Button
-                                name="heart"
-                                backgroundColor="#3b5998"
-                                size={20}
-                                style={styles.teste}
-                            >
-
-                            </Icon.Button>
+                        <TouchableHighlight style={styles.button}>
+                                <Icon name="heart" color="white"/>
+                            </TouchableHighlight>
                             <Text>{item.likes}</Text>
                         </View>
 
                         <View style={styles.containerButtons}>
-                            <Icon.Button
-                                name="comments"
-                                backgroundColor="#3b5998"
-                                borderRadius={0}
-                            >
-
-                            </Icon.Button>
-
-                            <Text>{item.likes}</Text>
+                            <TouchableHighlight style={styles.button}>
+                                <Icon name="comments" color="white"/>
+                            </TouchableHighlight>
+                            <Text>{item.comments.length}</Text>
                         </View>
                     </View>
                     <Icon name="chain" size={25} />
@@ -107,9 +97,9 @@ class Home extends Component {
 
 const styles = StyleSheet.create({
 
-    teste:{
-        alignSelf:"center"
-    },  
+    teste: {
+        alignSelf: "center"
+    },
 
     container: {
         flex: 1,
@@ -170,8 +160,19 @@ const styles = StyleSheet.create({
 
     containerButtons: {
         flexDirection: "row",
-        marginRight: 15,
+        marginRight: 30,
         width: 50,
+        justifyContent:"center",
+        alignItems:"center"
+    },
+
+    button:{
+        height:35,
+        width:35,
+        borderRadius:35,
+        backgroundColor:"blue",
+        justifyContent:"center",
+        alignItems:"center"
     }
 
 });
