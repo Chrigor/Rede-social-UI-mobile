@@ -10,7 +10,6 @@ class Login extends Component {
     }
 
     clickLogin = () => {
-        Alert.alert("Clicou login safafo")
         this.navigateToHome()
     }
 

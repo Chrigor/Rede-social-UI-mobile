@@ -3,6 +3,18 @@ import { createAppContainer } from 'react-navigation';
 import Login from './Login'
 import Home from './Home'
 
+
+const config = {
+    headerLayoutPreset: 'center',
+    headerBackTitleVisible: false,
+    defaultNavigationOptions: {
+        headerStyle: {
+            backgroundColor:  "rgba(25, 26, 29, 1)",
+        },
+        headerTintColor: '#fff',
+    },
+}
+
 const ModalNavigator = createStackNavigator(
     {
         Login: {
@@ -15,11 +27,13 @@ const ModalNavigator = createStackNavigator(
         Home: {
             screen: Home,
             navigationOptions: () => ({
-               title: 'Home page'
+                title: 'Clone gram?',
             }),
         }
 
     },
+
+    config
 );
 
 const appContainer = createAppContainer(ModalNavigator);

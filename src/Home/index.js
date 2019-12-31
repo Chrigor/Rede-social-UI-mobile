@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import { Image, StyleSheet, TextInput, TouchableHighlight, Text, View, Alert, ScrollView, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
-
-
 const DATA = [
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-        name: 'First Item',
-        description: 'uahshuasduhasduhdsuha',
+        name: 'Kelvin Klen',
+        description: 'Imagine uma nova história para sua vida e acredite nela ',
         date: '31/12/2019 at 14:32 PM',
         imagePost: require("../../assets/post.jpg"),
         imagePerfil: require("../../assets/user1.jpg"),
@@ -17,8 +15,8 @@ const DATA = [
     },
     {
         id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-        name: 'Second Item',
-        description: 'uahshuasduhasduhdsuha',
+        name: 'Mc Zói de Gato',
+        description: 'Ser feliz sem motivo é a mais autêntica forma de felicidade.',
         date: '31/12/2019 at 14:32 PM',
         imagePost: require("../../assets/post1.jpg"),
         imagePerfil: require("../../assets/user2.jpg"),
@@ -27,8 +25,8 @@ const DATA = [
     },
     {
         id: '58694a0f-3da1-471f-bd96-145571e29d72',
-        name: 'Third Item',
-        description: 'uahshuasduhasduhdsuha',
+        name: 'Roberto Carlos Jovem',
+        description: 'Não existe um caminho para a felicidade. A felicidade é o caminho.',
         date: '31/12/2019 at 14:32 PM',
         imagePost: require("../../assets/post3.jpg"),
         imagePerfil: require("../../assets/user3.jpg"),
@@ -43,6 +41,7 @@ class Home extends Component {
 
     clickLike = () => {
         Alert.alert("like")
+
     }
 
     clickComment = () => {
@@ -69,20 +68,20 @@ class Home extends Component {
                 <View style={styles.containerBottomPost}>
                     <View style={styles.containerGroupButtons}>
                         <View style={styles.containerButtons}>
-                        <TouchableHighlight style={styles.button} onPress={this.clickLike}>
-                                <Icon name="heart" color="white"/>
+                            <TouchableHighlight style={styles.button} onPress={this.clickLike}>
+                                <Icon name="heart" color="white" />
                             </TouchableHighlight>
                             <Text style={styles.textIndicator}>{item.likes}</Text>
                         </View>
 
                         <View style={styles.containerButtons}>
                             <TouchableHighlight style={styles.button} onPress={this.clickComment}>
-                                <Icon name="comments" color="white"/>
+                                <Icon name="comments" color="white" />
                             </TouchableHighlight>
                             <Text style={styles.textIndicator}>{item.comments.length}</Text>
                         </View>
                     </View>
-                    <Icon name="chain" size={25} color="white"/>
+                    <Icon name="chain" size={25} color="white" />
                 </View>
             </View>
         )
@@ -112,10 +111,9 @@ const styles = StyleSheet.create({
     },
 
     containerPost: {
-        height: 385,
-        width: 340,
+        flex: 1,
         padding: 10,
-        marginBottom: 35
+        marginBottom: 5
     },
 
     imagePerfil: {
@@ -130,23 +128,23 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(25, 26, 29, 1)"
     },
 
-    textName:{
-        fontSize:15,
-        color:"#fff",
-        fontWeight:"bold"
-    },  
+    textName: {
+        fontSize: 15,
+        color: "#fff",
+        fontWeight: "bold"
+    },
 
     textDate: {
-        fontSize:12,
-        color:"rgba(120,120,120,0.9)",
-        fontWeight:"bold"
+        fontSize: 12,
+        color: "rgba(120,120,120,0.9)",
+        fontWeight: "bold"
     },
 
     textIndicator: {
-        fontSize:12,
-        color:"#fff",
-        margin:2
-    },  
+        fontSize: 12,
+        color: "#fff",
+        margin: 2
+    },
 
     imagePost: {
         width: "100%",
@@ -157,10 +155,10 @@ const styles = StyleSheet.create({
 
     descriptionPost: {
         fontSize: 15,
-        marginLeft:5,
+        marginLeft: 5,
         marginTop: 10,
-        fontSize:15,
-        color:"#fff"
+        fontSize: 15,
+        color: "#fff"
     },
 
     conateinerNameDate: {
@@ -169,8 +167,8 @@ const styles = StyleSheet.create({
     },
 
     lineStyle: {
-        borderWidth: 0.5,
-        borderColor: 'black',
+        borderWidth: 0.195,
+        borderColor: 'rgba(255,255,255,1)',
         margin: 10,
     },
 
@@ -188,17 +186,17 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginRight: 30,
         width: 50,
-        justifyContent:"center",
-        alignItems:"center"
+        justifyContent: "center",
+        alignItems: "center"
     },
 
-    button:{
-        height:35,
-        width:35,
-        borderRadius:35,
-        backgroundColor:"blue",
-        justifyContent:"center",
-        alignItems:"center"
+    button: {
+        height: 35,
+        width: 35,
+        borderRadius: 35,
+        backgroundColor: "rgba(25, 26, 29, 0.8)",
+        justifyContent: "center",
+        alignItems: "center"
     }
 
 });
