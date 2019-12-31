@@ -15,7 +15,7 @@ const ModalNavigator = createStackNavigator(
         Home: {
             screen: Home,
             navigationOptions: () => ({
-                headerShown: false, // Retira a status bar
+               title: 'Home page'
             }),
         }
 
