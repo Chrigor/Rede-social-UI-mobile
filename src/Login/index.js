@@ -15,20 +15,16 @@ class Login extends Component {
     }
 
     changeLogin = (text) => {
-        this.setState({ login: text })
-        Alert.alert(this.state.login)
-      
+        this.setState({ login: text })      
     }
 
     changePassword = (text) => {
         this.setState({ password: text })
-        Alert.alert(this.state.password)
     }
 
     navigateToHome = () => {
         const { navigation } = this.props;
         navigation.navigate('Home');
-        Alert.alert("ua")
     }
 
 
