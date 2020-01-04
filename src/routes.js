@@ -2,6 +2,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import Login from './Login'
 import Home from './Home'
+import RotasHome from './Home/start'
 
 
 const config = {
@@ -24,10 +25,11 @@ const ModalNavigator = createStackNavigator(
             }),
         },
 
-        Home: {
-            screen: Home,
+        RotasHome: {
+            screen: RotasHome,
             navigationOptions: () => ({
                 title: 'Clone gram?',
+                headerShown: false, // Retira a status bar
             }),
         }
 

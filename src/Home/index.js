@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet, TextInput, TouchableHighlight, Text, View, Alert, ScrollView, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import ButtonInsta  from '../components/button'
 
 const DATA = [
     {
@@ -41,7 +42,6 @@ class Home extends Component {
 
     clickLike = () => {
         Alert.alert("like")
-
     }
 
     clickComment = () => {
@@ -67,19 +67,8 @@ class Home extends Component {
 
                 <View style={styles.containerBottomPost}>
                     <View style={styles.containerGroupButtons}>
-                        <View style={styles.containerButtons}>
-                            <TouchableHighlight style={styles.button} onPress={this.clickLike}>
-                                <Icon name="heart" color="white" />
-                            </TouchableHighlight>
-                            <Text style={styles.textIndicator}>{item.likes}</Text>
-                        </View>
-
-                        <View style={styles.containerButtons}>
-                            <TouchableHighlight style={styles.button} onPress={this.clickComment}>
-                                <Icon name="comments" color="white" />
-                            </TouchableHighlight>
-                            <Text style={styles.textIndicator}>{item.comments.length}</Text>
-                        </View>
+                        <ButtonInsta color="white" quantidade={item.likes} tipoButton="thumbs-up"/>
+                        <ButtonInsta color="white" quantidade={item.comments.length} tipoButton="comments"/>
                     </View>
                     <Icon name="chain" size={25} color="white" />
                 </View>
@@ -148,7 +137,7 @@ const styles = StyleSheet.create({
 
     imagePost: {
         width: "100%",
-        height: 250,
+        height: 260,
         alignSelf: "center"
     },
 
@@ -182,22 +171,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
 
-    containerButtons: {
-        flexDirection: "row",
-        marginRight: 30,
-        width: 50,
-        justifyContent: "center",
-        alignItems: "center"
-    },
-
-    button: {
-        height: 35,
-        width: 35,
-        borderRadius: 35,
-        backgroundColor: "rgba(25, 26, 29, 0.8)",
-        justifyContent: "center",
-        alignItems: "center"
-    }
 
 });
 

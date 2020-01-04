@@ -23,7 +23,7 @@ class Login extends Component {
 
     navigateToHome = () => {
         const { navigation } = this.props;
-        navigation.navigate('Home');
+        navigation.navigate('RotasHome');
     }
 
 
