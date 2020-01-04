@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet, TextInput, TouchableHighlight, Text, View, Alert, ScrollView, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import ButtonInsta  from '../components/button'
+import ButtonInsta  from '../components/button';
+import Moment from '../components/moments'
 
 const DATA = [
     {
@@ -36,9 +37,52 @@ const DATA = [
     },
 ];
 
+const dataMoments = [
+    {
+        id: '58694a0f-3da1-471f-bd96-145571e29d72',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a0f-3da1-471f-bd96-145571e29d3',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a0f-3da1-471f-bd96-145571e723',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a0f-3da1-471f-bd96-145529d723',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a0f-3da1-471f-bd96-171e29d723',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a0f-3da1-471f-bd45571e29d723',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a0f-3da1-471f96-145571e29d723',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a0f-3da1-4-bd96-145571e29d723',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a0f-3d71f-bd96-145571e29d723',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+    {
+        id: '58694a1-471f-bd96-145571e29d723',
+        imagePerfil: require("../../assets/user3.jpg"),
+    },
+
+]
+
 
 class Home extends Component {
-
 
     clickLike = () => {
         Alert.alert("like")
@@ -79,6 +123,10 @@ class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Moment 
+                    data = {dataMoments}
+                />
+
                 <FlatList
                     data={DATA}
                     keyExtractor={item => item.id}
@@ -88,7 +136,6 @@ class Home extends Component {
         )
     }
 }
-
 
 
 const styles = StyleSheet.create({
