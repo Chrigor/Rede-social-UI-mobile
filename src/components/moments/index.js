@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
-import { View, Text, StyleSheet, FlatList, Image } from 'react-native'
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, FlatList, Image, Alert, TouchableHighlight } from 'react-native';
+
+import Moment from '../moment'
 
 export default class Moments extends Component {
 
@@ -14,10 +16,11 @@ export default class Moments extends Component {
     }
 
 
-    renderMoment = ({ item }) => {
+
+    renderMoment = ({item}) => {
         return (
             <>
-                <Image source={item.imagePerfil} style={styles.moments} />
+                <Moment src={item.imagemPerfil}/>
             </>
         )
     }
@@ -43,17 +46,19 @@ export default class Moments extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        height: 70,
-        backgroundColor: "red",
-        flexDirection:"row",
-        alignItems:"center",
+        height: 60,
+        flexDirection: "row",
+        alignItems: "center",
+        borderBottomColor: "white",
+        margin: 5
     },
 
     moments: {
-        height: 60,
-        width: 60,
-        borderRadius:50,
-        margin:5,
-        borderColor: "black"
+        height: 55,
+        width: 55,
+        borderRadius: 50,
+        margin: 5,
+        borderColor: "white",
+        borderWidth: 0.4,
     }
 })

@@ -44,15 +44,15 @@ const dataMoments = [
     },
     {
         id: '58694a0f-3da1-471f-bd96-145571e29d3',
-        imagePerfil: require("../../assets/user3.jpg"),
+        imagePerfil: require("../../assets/user1.jpg"),
     },
     {
         id: '58694a0f-3da1-471f-bd96-145571e723',
-        imagePerfil: require("../../assets/user3.jpg"),
+        imagePerfil: require("../../assets/user2.jpg"),
     },
     {
         id: '58694a0f-3da1-471f-bd96-145529d723',
-        imagePerfil: require("../../assets/user3.jpg"),
+        imagePerfil: require("../../assets/user1.jpg"),
     },
     {
         id: '58694a0f-3da1-471f-bd96-171e29d723',
@@ -60,11 +60,11 @@ const dataMoments = [
     },
     {
         id: '58694a0f-3da1-471f-bd45571e29d723',
-        imagePerfil: require("../../assets/user3.jpg"),
+        imagePerfil: require("../../assets/user1.jpg"),
     },
     {
         id: '58694a0f-3da1-471f96-145571e29d723',
-        imagePerfil: require("../../assets/user3.jpg"),
+        imagePerfil: require("../../assets/user2.jpg"),
     },
     {
         id: '58694a0f-3da1-4-bd96-145571e29d723',
@@ -72,11 +72,11 @@ const dataMoments = [
     },
     {
         id: '58694a0f-3d71f-bd96-145571e29d723',
-        imagePerfil: require("../../assets/user3.jpg"),
+        imagePerfil: require("../../assets/user1.jpg"),
     },
     {
         id: '58694a1-471f-bd96-145571e29d723',
-        imagePerfil: require("../../assets/user3.jpg"),
+        imagePerfil: require("../../assets/user2.jpg"),
     },
 
 ]

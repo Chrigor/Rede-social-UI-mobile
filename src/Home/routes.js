@@ -12,9 +12,6 @@ import Profile from '../Profile';
 
 
 const config = {
-    defaultNavigationOptions: {
-
-    },
     tabBarOptions: {
         activeTintColor: "#5458F7",
         style: {
