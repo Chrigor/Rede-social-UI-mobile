@@ -3,17 +3,18 @@ import { StyleSheet, Image, Alert, TouchableHighlight } from 'react-native';
 
 export default class Moment extends Component {
     state = {
-        src: ''
+        src: {},
+        text:''
     }
 
     componentWillMount() {
-        //const { src } = this.props;
-        this.setState({ src: { uri: "http://s.glbimg.com/po/tt/f/original/2013/09/18/facebookperfil.jpg" } })
+        const { text, imagem} = this.props;
+        this.setState({ src: imagem, text })
     }
 
 
     clickMoment = () => {
-        Alert.alert("click")
+        Alert.alert(this.state.text)
     }
 
     render() {

@@ -17,10 +17,10 @@ export default class Moments extends Component {
 
 
 
-    renderMoment = ({item}) => {
+    renderMoment = ({ item }) => {
         return (
             <>
-                <Moment src={item.imagemPerfil}/>
+                <Moment imagem={item.imagePerfil} text={item.id} />
             </>
         )
     }
