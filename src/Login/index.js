@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, TextInput, TouchableHighlight, Text, View, Alert, ScrollView } from 'react-native';
+import { Image, StyleSheet, TextInput, TouchableHighlight, Text, View, Alert, ScrollView, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 class Login extends Component {
@@ -29,7 +29,7 @@ class Login extends Component {
 
     render() {
         return (
-            <ScrollView style={styles.container} behavior="padding">
+            <SafeAreaView  style={styles.container}>
                 <View style={styles.containerLogin}>
                     <Image style={styles.logo} source={require("../../assets/logo.png")} />
                     <View style={styles.containerInput}>
@@ -44,7 +44,7 @@ class Login extends Component {
                         <Text style={styles.textLogin}>Login</Text>
                     </TouchableHighlight>
                 </View>
-            </ScrollView>
+            </SafeAreaView >
         )
     }
 }
@@ -60,12 +60,13 @@ const styles = StyleSheet.create({
     containerLogin: {
         margin: 20,
         alignItems: "center",
+        padding: 24,
+        justifyContent: "flex-end",
     },
 
     logo: {
         height: 150,
         width: 210,
-        marginBottom: 25,
     },
 
     input: {

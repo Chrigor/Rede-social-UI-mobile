@@ -35,6 +35,18 @@ const DATA = [
         likes: 21,
         comments: []
     },
+
+    {
+        id: '58694a0f-3da1----',
+        name: 'Pedrin',
+        description: 'Oi, eu sou Goku',
+        date: '03/01/2020 at 13:32 PM',
+        imagePost: { uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUcTUBsXk6iScuq71HGCBVFPU8grr8AAgf1FmGxcTOpddlhdn_w&s" },
+        imagePerfil: { uri: "https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2019/07/21/indice.jpg" },
+        likes: 21,
+        comments: []
+    },
+
 ];
 
 const dataMoments = [
