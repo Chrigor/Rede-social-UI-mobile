@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TouchableHighlight, Image, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight, Image, Dimensions, Alert } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 
 export default class Profile extends Component {
+
+
+    handleClickMessage = () => {
+        Alert.alert("Click message")
+    }
+
+    handleClickFollow = () => {
+        Alert.alert("Click follow")
+    }
 
     render() {
         return (
@@ -31,17 +40,26 @@ export default class Profile extends Component {
                         </View>
 
                         <View style={styles.rowTwo}>
-                            <TouchableHighlight style={styles.buttonMessage}>
-                                <Text>Message</Text>
+                            <TouchableHighlight style={styles.buttonMessage} onPress={this.handleClickMessage}>
+                                <Text style={styles.textButton}>Message</Text>
                             </TouchableHighlight>
 
-                            <TouchableHighlight style={styles.buttonSeguir}>
+                            <TouchableHighlight style={styles.buttonSeguir}  onPress={this.handleClickFollow}>
                                 <Icon name="user-plus" size={20} color="white"/>
                             </TouchableHighlight>
                         </View>
                     </View>
                 </View>
+                <View>
+                    <View style={styles.containerNameAndProf}>
+                        <Text style={styles.textInfo}>Saba</Text>
+                        <Text style={styles.textLabel}>Band/Musician</Text>
+                    </View>
 
+                    <View style={styles.containerDescriptionProfile}>
+                        <Text style={styles.textDescription}>PIVOTING <Icon name="user"/> ~{"\n"}CARE FOR ME TOUR OUT NOW <Icon name="microphone"/> ~{"\n"}#CHICHI-NOW~{"\n"}This remind me of before we had insomnia Sleepin' peacefully, never needed a pile of drugs </Text>
+                    </View>
+                </View>
             </View>
         )
     }
@@ -132,6 +150,30 @@ const styles = StyleSheet.create({
     textLabel: {
         color:"rgba(85, 96, 85, 1)",
         fontSize:15
+    },
+
+    textButton:{
+        fontSize:15,
+        color:"white"
+    },
+
+    containerNameAndProf: {
+        paddingVertical:5,
+        paddingHorizontal:5,
+        marginVertical:2,
+        marginHorizontal:5,
+    },
+
+    containerDescriptionProfile: {
+        paddingVertical:10,
+        paddingHorizontal:5,
+        marginHorizontal:5,
+    },
+
+    textDescription: {
+        fontSize:13,
+        color:"white",
+        padding:2,
     }
 
 })
