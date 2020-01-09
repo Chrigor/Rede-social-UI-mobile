@@ -28,6 +28,7 @@ const ModalNavigator = createStackNavigator(
             screen: RotasHome,
             navigationOptions: () => ({
                 title: 'Clone gram?',
+                headerShown: false, // Retira a status bar
             }),
         }
 

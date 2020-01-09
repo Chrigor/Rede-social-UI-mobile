@@ -4,11 +4,11 @@ import { StyleSheet, Image, Alert, TouchableHighlight } from 'react-native';
 export default class Moment extends Component {
     state = {
         src: {},
-        text:''
+        text: ''
     }
 
     componentWillMount() {
-        const { text, imagem} = this.props;
+        const { text, imagem } = this.props;
         this.setState({ src: imagem, text })
     }
 
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         width: 55,
         borderRadius: 50,
         margin: 5,
-        borderColor: "white",
-        borderWidth: 0.4,
+        borderColor: "#5458F7",
+        borderWidth: 1.4,
     }
 })
