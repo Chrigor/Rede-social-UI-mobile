@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Routes from './routes';
 
-const index = function() {
-  return <Routes />;
-};
+export default class index extends Component {
+  render() {
+    const user = this.props.navigation.getParam('user', 't');
+    console.log(user);
 
-export default index;
+    return <Routes screenProps={{user}}/>;
+  }
+}
