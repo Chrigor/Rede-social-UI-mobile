@@ -205,7 +205,7 @@ class Home extends Component {
 
     return (
       <View style={styles.container}>
-        <Text>{userLogado.user.name}</Text>
+
         <Moment data={dataMoments} />
 
         <FlatList
@@ -263,7 +263,8 @@ const styles = StyleSheet.create({
 
   imagePost: {
     width: '100%',
-    height: 260,
+    height: 300,
+    marginBottom:5,
     alignSelf: 'center',
   },
 
