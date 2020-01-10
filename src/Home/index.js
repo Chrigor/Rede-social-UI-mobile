@@ -199,13 +199,13 @@ class Home extends Component {
   };
 
   render() {
-
-    const user = this.props.screenProps;
-    console.log("ASDHHUSD:");
-    console.log(user);
+    const userLogado = this.props.screenProps;
+    console.log('Parametros Screen props:');
+    console.log(userLogado.user.name);
 
     return (
       <View style={styles.container}>
+        <Text>{userLogado.user.name}</Text>
         <Moment data={dataMoments} />
 
         <FlatList

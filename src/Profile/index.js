@@ -20,32 +20,40 @@ export default class Profile extends Component {
   };
 
   render() {
+    const userLogado = this.props.screenProps;
+    console.log('Parametros Screen props no Profile:');
+    console.log(userLogado.user.info.following);
+
+    const name = userLogado.user.name;
+    const description = userLogado.user.description;
+    const foto = userLogado.user.foto;
+    const followers = userLogado.user.info.followers;
+    const following = userLogado.user.info.following;
+    const post = userLogado.user.info.post;
+
     return (
       <View style={styles.container}>
         <View style={styles.containerAllInfo}>
           <View style={styles.containerImage}>
             <Image
               style={styles.imageProfile}
-              source={{
-                uri:
-                  'https://media.istockphoto.com/photos/profile-view-of-serious-young-man-over-white-background-picture-id534880122',
-              }}
+              source={foto}
             />
           </View>
           <View style={styles.containerInfo}>
             <View style={styles.rowOne}>
               <View style={{alignItems: 'center'}}>
-                <Text style={styles.textInfo}>142</Text>
+              <Text style={styles.textInfo}>{post}</Text>
                 <Text style={styles.textLabel}>Posts</Text>
               </View>
 
               <View style={{alignItems: 'center'}}>
-                <Text style={styles.textInfo}>7.4M</Text>
+                <Text style={styles.textInfo}>{followers}</Text>
                 <Text style={styles.textLabel}>Followers</Text>
               </View>
 
               <View style={{alignItems: 'center'}}>
-                <Text style={styles.textInfo}>117</Text>
+                <Text style={styles.textInfo}>{following}</Text>
                 <Text style={styles.textLabel}>Following</Text>
               </View>
             </View>
@@ -67,17 +75,12 @@ export default class Profile extends Component {
         </View>
         <View>
           <View style={styles.containerNameAndProf}>
-            <Text style={styles.textInfo}>Saba</Text>
+            <Text style={styles.textInfo}>{name}</Text>
             <Text style={styles.textLabel}>Band/Musician</Text>
           </View>
 
           <View style={styles.containerDescriptionProfile}>
-            <Text style={styles.textDescription}>
-              PIVOTING <Icon name="user" /> ~{'\n'}CARE FOR ME TOUR OUT NOW{' '}
-              <Icon name="microphone" /> ~{'\n'}#CHICHI-NOW~{'\n'}This remind me
-              of before we had insomnia Sleepin' peacefully, never needed a pile
-              of drugs{' '}
-            </Text>
+            <Text style={styles.textDescription}>{description}</Text>
           </View>
         </View>
       </View>

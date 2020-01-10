@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   StyleSheet,
@@ -13,6 +13,17 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
+const userLogado = {
+  name: 'Chrigor Eduardo', 
+  description: 'lorem ipsum hatatate teste', 
+  foto: { uri: 'https://media.istockphoto.com/photos/profile-view-of-serious-young-man-over-white-background-picture-id534880122' }, 
+  info: { 
+    followers: "7.4M", 
+    following: "2.1K", 
+    post: "120" 
+  }
+}
+
 class Login extends Component {
   state = {
     login: '',
@@ -24,16 +35,23 @@ class Login extends Component {
   };
 
   changeLogin = text => {
-    this.setState({login: text});
+    this.setState({ login: text });
   };
 
   changePassword = text => {
-    this.setState({password: text});
+    this.setState({ password: text });
   };
 
+
   navigateToHome = () => {
-    const {navigation} = this.props;
-    navigation.navigate('RotasHome', {user:{name:"Chrigor Logado"}});
+    const { navigation } = this.props;
+    const { login, password } = this.state;
+
+    if (login == 'Chrigor' && password == '123') {
+      navigation.navigate('RotasHome', { user: userLogado});
+    } else {
+      Alert.alert("Erro de usuário e senha")
+    }
   };
 
   render() {
