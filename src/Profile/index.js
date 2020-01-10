@@ -30,6 +30,7 @@ export default class Profile extends Component {
     const followers = userLogado.user.info.followers;
     const following = userLogado.user.info.following;
     const post = userLogado.user.info.post;
+    const profissao = userLogado.user.profissao;
 
     return (
       <View style={styles.container}>
@@ -76,7 +77,7 @@ export default class Profile extends Component {
         <View>
           <View style={styles.containerNameAndProf}>
             <Text style={styles.textInfo}>{name}</Text>
-            <Text style={styles.textLabel}>Band/Musician</Text>
+            <Text style={styles.textLabel}>{profissao}</Text>
           </View>
 
           <View style={styles.containerDescriptionProfile}>
