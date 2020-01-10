@@ -21,9 +21,7 @@ export default class Profile extends Component {
 
   render() {
     const userLogado = this.props.screenProps;
-    console.log('Parametros Screen props no Profile:');
-    console.log(userLogado.user.info.following);
-
+    
     const name = userLogado.user.name;
     const description = userLogado.user.description;
     const foto = userLogado.user.foto;
@@ -108,7 +106,6 @@ const styles = StyleSheet.create({
     height: 150,
     width: widthScreen,
     flexDirection: 'row',
-    // backgroundColor: "blue",
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -182,7 +179,6 @@ const styles = StyleSheet.create({
   },
 
   containerNameAndProf: {
-    paddingVertical: 5,
     paddingHorizontal: 5,
     marginVertical: 2,
     marginHorizontal: 5,

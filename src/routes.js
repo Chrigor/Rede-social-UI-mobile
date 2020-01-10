@@ -1,5 +1,4 @@
-import {createStackNavigator} from 'react-navigation-stack';
-import {createAppContainer} from 'react-navigation';
+import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import Login from './Login';
 import RotasHome from './Home/start';
 
@@ -14,7 +13,7 @@ const config = {
   },
 };
 
-const ModalNavigator = createStackNavigator(
+const ModalNavigator = createSwitchNavigator(
   {
     Login: {
       screen: Login,
