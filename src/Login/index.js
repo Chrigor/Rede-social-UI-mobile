@@ -15,7 +15,7 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const userLogado = {
   name: 'Chrigor Eduardo', 
-  description: 'lorem ipsum hatatate teste \nOs Desenvolvedores(as) Web são especialistas na construção de sites, sistemas ou aplicativos para web, tanto no Front como Back-end. » Infográfico: seu projeto precisa de um(a) Web Designer ou um(a) Desenvolvedor', 
+  description: 'Os Desenvolvedores(as) Web são especialistas na construção de sites, sistemas ou aplicativos para web, tanto no Front como Back-end. » Infográfico: seu projeto precisa de um(a) Web Designer ou um(a) Desenvolvedor', 
   foto: { uri: 'https://media.istockphoto.com/photos/profile-view-of-serious-young-man-over-white-background-picture-id534880122' }, 
   profissao: "Programmer/Enginner",
   info: { 

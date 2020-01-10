@@ -21,7 +21,7 @@ export default class Profile extends Component {
 
   render() {
     const userLogado = this.props.screenProps;
-    
+
     const name = userLogado.user.name;
     const description = userLogado.user.description;
     const foto = userLogado.user.foto;
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
   },
 
   containerDescriptionProfile: {
-    paddingVertical: 10,
+    paddingVertical: 7,
     paddingHorizontal: 5,
     marginHorizontal: 5,
   },

@@ -6,7 +6,7 @@ export default class Localization extends Component {
     render(){
         return (
             <View style={styles.container}>
-                <Text>Localization</Text>
+                <Text>Search</Text>
             </View>
         )
     }

@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import Home from './index';
 import Camera from '../Camera/';
-import Localization from '../Localization';
+import Search from '../Search';
 import Profile from '../Profile';
 
 const config = {
@@ -17,10 +17,6 @@ const config = {
     },
   },
 };
-
-
-
-
 
 const Routes = createAppContainer(
 
@@ -35,6 +31,17 @@ const Routes = createAppContainer(
           ),
         }),
       },
+
+      Search: {
+        screen: Search,
+        navigationOptions: () => ({
+          title: 'Search',
+          tabBarIcon: ({tintColor}) => (
+            <Icon name="search" color={tintColor} size={18} />
+          ),
+        }),
+      },
+
       Camera: {
         screen: Camera,
         navigationOptions: () => ({
@@ -44,15 +51,7 @@ const Routes = createAppContainer(
           ),
         }),
       },
-      Localization: {
-        screen: Localization,
-        navigationOptions: () => ({
-          title: 'Localization',
-          tabBarIcon: ({tintColor}) => (
-            <Icon name="map-marker" color={tintColor} size={18} />
-          ),
-        }),
-      },
+      
       Profile: {
         screen: Profile,
         navigationOptions: () => ({
