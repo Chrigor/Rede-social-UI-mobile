@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Text,
@@ -7,10 +7,20 @@ import {
   Image,
   Dimensions,
   Alert,
+  ScrollView,
+  FlatList,
 } from 'react-native';
+
 import Icon from 'react-native-vector-icons/FontAwesome';
+import PhotoGrid from '../components/photoGrid';
 
 export default class Profile extends Component {
+  renderPhotoGrid = ({ item }) => {
+    return (
+      <PhotoGrid foto={item.photoUrl} />
+    );
+  };
+
   handleClickMessage = () => {
     Alert.alert('Click message');
   };
@@ -34,24 +44,21 @@ export default class Profile extends Component {
       <View style={styles.container}>
         <View style={styles.containerAllInfo}>
           <View style={styles.containerImage}>
-            <Image
-              style={styles.imageProfile}
-              source={foto}
-            />
+            <Image style={styles.imageProfile} source={foto} />
           </View>
           <View style={styles.containerInfo}>
             <View style={styles.rowOne}>
-              <View style={{alignItems: 'center'}}>
-              <Text style={styles.textInfo}>{post}</Text>
+              <View style={{ alignItems: 'center' }}>
+                <Text style={styles.textInfo}>{post}</Text>
                 <Text style={styles.textLabel}>Posts</Text>
               </View>
 
-              <View style={{alignItems: 'center'}}>
+              <View style={{ alignItems: 'center' }}>
                 <Text style={styles.textInfo}>{followers}</Text>
                 <Text style={styles.textLabel}>Followers</Text>
               </View>
 
-              <View style={{alignItems: 'center'}}>
+              <View style={{ alignItems: 'center' }}>
                 <Text style={styles.textInfo}>{following}</Text>
                 <Text style={styles.textLabel}>Following</Text>
               </View>
@@ -82,6 +89,15 @@ export default class Profile extends Component {
             <Text style={styles.textDescription}>{description}</Text>
           </View>
         </View>
+
+
+        <FlatList
+          horizontal={false}
+          data={dataPhotosGrid}
+          keyExtractor={item => item.id}
+          renderItem={this.renderPhotoGrid}
+        />
+
       </View>
     );
   }
@@ -126,11 +142,12 @@ const styles = StyleSheet.create({
   },
 
   rowOne: {
+    flex: 1,
     flexDirection: 'row',
     paddingVertical: 5,
     paddingHorizontal: 10,
+    alignItems: 'center',
     justifyContent: 'space-between',
-    // backgroundColor:"red"
   },
 
   rowTwo: {
@@ -195,4 +212,44 @@ const styles = StyleSheet.create({
     color: 'white',
     padding: 2,
   },
+
 });
+
+const dataPhotosGrid = [
+  {
+    id: 1,
+    description: 'Hatuashduhauh',
+    photoUrl: {
+      uri:
+        'https://media.istockphoto.com/photos/profile-view-of-serious-young-man-over-white-background-picture-id534880122',
+    },
+  },
+
+  {
+    id: 2,
+    description: 'Hatuashduhauh',
+    photoUrl: {
+      uri:
+        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+    },
+  },
+
+  {
+    id: 3,
+    description: 'Hatuashduhauh',
+    photoUrl: {
+      uri:
+        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+    },
+  },
+
+  {
+    id: 5,
+    description: 'Hatuashduhauh',
+    photoUrl: {
+      uri:
+        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+    },
+  },
+
+];

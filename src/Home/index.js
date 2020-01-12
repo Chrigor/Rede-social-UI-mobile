@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   Image,
   StyleSheet,
@@ -166,16 +166,13 @@ class Home extends Component {
     Alert.alert('comment');
   };
 
-  renderPost = ({ item }) => {
-
+  renderPost = ({item}) => {
+    // Melhorar isso aqui colocando para cor vir do server
     const userLogado = this.props.screenProps;
     const id = userLogado.user.id;
-    console.log("ID: ", id);
+    const {whoLike} = item;
 
-    const { whoLike } = item;
-    console.log("Who like: ", whoLike);
-
-    var color = whoLike.indexOf(id) == -1 ? "white": "#5458F7";
+    var color = whoLike.indexOf(id) == -1 ? 'white' : '#5458F7';
 
     return (
       <View style={styles.containerPost}>
@@ -219,7 +216,6 @@ class Home extends Component {
 
     return (
       <View style={styles.container}>
-
         <Moment data={dataMoments} />
 
         <FlatList
