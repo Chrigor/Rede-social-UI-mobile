@@ -9,9 +9,9 @@ export default class PhotoGrid extends Component {
     console.log(foto);
 
     return (
-     
+      <View style={styles.container}>
         <Image source={foto} style={styles.image} />
-
+      </View>
     );
   }
 }
@@ -22,11 +22,9 @@ const height = screenDimensions.height;
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    height: 140,
-    width: width / 3,
-    marginVertical: 5,
-    padding: 10,
+    flexGrow: 1,
+    flexBasis: 0,
+    padding: 2,
     backgroundColor: 'blue',
   },
 

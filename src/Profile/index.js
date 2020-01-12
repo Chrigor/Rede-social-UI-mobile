@@ -92,7 +92,7 @@ export default class Profile extends Component {
 
 
         <FlatList
-          horizontal={false}
+          numColumns={3}
           data={dataPhotosGrid}
           keyExtractor={item => item.id}
           renderItem={this.renderPhotoGrid}
@@ -245,6 +245,33 @@ const dataPhotosGrid = [
 
   {
     id: 5,
+    description: 'Hatuashduhauh',
+    photoUrl: {
+      uri:
+        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+    },
+  },
+
+  {
+    id: 6,
+    description: 'Hatuashduhauh',
+    photoUrl: {
+      uri:
+        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+    },
+  },
+
+  {
+    id: 7,
+    description: 'Hatuashduhauh',
+    photoUrl: {
+      uri:
+        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+    },
+  },
+
+  {
+    id: 8,
     description: 'Hatuashduhauh',
     photoUrl: {
       uri:
