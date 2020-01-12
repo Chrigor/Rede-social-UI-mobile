@@ -47,7 +47,7 @@ const DATA = [
     },
     likes: 5,
     whoLike: [157],
-    comments: [],
+    comments: [{}, {}],
   },
   {
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
@@ -64,7 +64,7 @@ const DATA = [
     },
     likes: 21,
     whoLike: [],
-    comments: [],
+    comments: [{}],
   },
 
   {
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
 
   containerPost: {
     flex: 1,
-    padding: 10,
+    paddingVertical: 10,
     marginBottom: 5,
   },
 

@@ -48,7 +48,7 @@ const userLogado = {
       description: 'Hatuashduhauh',
       photoUrl: {
         uri:
-          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+          'https://www.weblink.com.br/blog/wp-content/uploads/2017/03/10-Dicas-para-Escrever-e-Publicar-sua-Primeira-Postagem-de-Blog.png',
       },
     },
   
@@ -57,7 +57,7 @@ const userLogado = {
       description: 'Hatuashduhauh',
       photoUrl: {
         uri:
-          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+          'https://img.elo7.com.br/product/zoom/27A31D9/criacao-de-10-artes-finais-postagens-anuncios-redes-sociais-promocao.jpg',
       },
     },
   
@@ -66,7 +66,7 @@ const userLogado = {
       description: 'Hatuashduhauh',
       photoUrl: {
         uri:
-          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+          'https://www.intelipost.com.br/wp-content/uploads/2017/03/entenda-ja-o-que-e-plp-prelista-de-postagem-e1489072662568.jpeg',
       },
     },
   
@@ -75,7 +75,7 @@ const userLogado = {
       description: 'Hatuashduhauh',
       photoUrl: {
         uri:
-          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+          'https://etus.com.br/images/agendamento-instagramx.jpg',
       },
     },
   
@@ -84,7 +84,7 @@ const userLogado = {
       description: 'Hatuashduhauh',
       photoUrl: {
         uri:
-          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+          'http://www.criarmeme.com.br/meme/meme-43410-que-merda-de-postagem-e-essa.jpg',
       },
     },
   
