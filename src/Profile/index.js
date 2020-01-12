@@ -17,7 +17,7 @@ import PhotoGrid from '../components/photoGrid';
 export default class Profile extends Component {
   renderPhotoGrid = ({ item }) => {
     return (
-      <PhotoGrid foto={item.photoUrl} />
+      <PhotoGrid foto={item.photoUrl} id={item.id}/>
     );
   };
 
@@ -39,6 +39,7 @@ export default class Profile extends Component {
     const following = userLogado.user.info.following;
     const post = userLogado.user.info.post;
     const profissao = userLogado.user.profissao;
+    const postagens = userLogado.user.posts;
 
     return (
       <View style={styles.container}>
@@ -90,10 +91,9 @@ export default class Profile extends Component {
           </View>
         </View>
 
-
         <FlatList
           numColumns={3}
-          data={dataPhotosGrid}
+          data={postagens}
           keyExtractor={item => item.id}
           renderItem={this.renderPhotoGrid}
         />
@@ -215,68 +215,4 @@ const styles = StyleSheet.create({
 
 });
 
-const dataPhotosGrid = [
-  {
-    id: 1,
-    description: 'Hatuashduhauh',
-    photoUrl: {
-      uri:
-        'https://media.istockphoto.com/photos/profile-view-of-serious-young-man-over-white-background-picture-id534880122',
-    },
-  },
 
-  {
-    id: 2,
-    description: 'Hatuashduhauh',
-    photoUrl: {
-      uri:
-        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
-    },
-  },
-
-  {
-    id: 3,
-    description: 'Hatuashduhauh',
-    photoUrl: {
-      uri:
-        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
-    },
-  },
-
-  {
-    id: 5,
-    description: 'Hatuashduhauh',
-    photoUrl: {
-      uri:
-        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
-    },
-  },
-
-  {
-    id: 6,
-    description: 'Hatuashduhauh',
-    photoUrl: {
-      uri:
-        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
-    },
-  },
-
-  {
-    id: 7,
-    description: 'Hatuashduhauh',
-    photoUrl: {
-      uri:
-        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
-    },
-  },
-
-  {
-    id: 8,
-    description: 'Hatuashduhauh',
-    photoUrl: {
-      uri:
-        'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
-    },
-  },
-
-];

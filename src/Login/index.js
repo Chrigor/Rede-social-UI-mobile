@@ -23,7 +23,72 @@ const userLogado = {
     followers: "7.4M",
     following: "2.1K",
     post: "120",
-  }
+  },
+  posts:[
+    {
+      id: 1,
+      description: 'Hatuashduhauh',
+      photoUrl: {
+        uri:
+          'https://media.istockphoto.com/photos/profile-view-of-serious-young-man-over-white-background-picture-id534880122',
+      },
+    },
+  
+    {
+      id: 2,
+      description: 'Hatuashduhauh',
+      photoUrl: {
+        uri:
+          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+      },
+    },
+  
+    {
+      id: 3,
+      description: 'Hatuashduhauh',
+      photoUrl: {
+        uri:
+          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+      },
+    },
+  
+    {
+      id: 5,
+      description: 'Hatuashduhauh',
+      photoUrl: {
+        uri:
+          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+      },
+    },
+  
+    {
+      id: 6,
+      description: 'Hatuashduhauh',
+      photoUrl: {
+        uri:
+          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+      },
+    },
+  
+    {
+      id: 7,
+      description: 'Hatuashduhauh',
+      photoUrl: {
+        uri:
+          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+      },
+    },
+  
+    {
+      id: 8,
+      description: 'Hatuashduhauh',
+      photoUrl: {
+        uri:
+          'https://files.incrivel.club/files/news/part_71/715010/7826310-image-crop-582x516-1544022435-728-1680c03dbb-1545057856.jpg',
+      },
+    },
+  
+  ]
 }
 
 class Login extends Component {

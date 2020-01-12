@@ -1,16 +1,25 @@
 import React, {Component} from 'react';
-import {View, Image, StyleSheet, Dimensions} from 'react-native';
+import {
+  View,
+  Image,
+  StyleSheet,
+  Dimensions,
+  TouchableHighlight,
+  Alert,
+} from 'react-native';
 
 export default class PhotoGrid extends Component {
   render() {
     const {foto} = this.props;
-
+    const {id} = this.props;
     console.log('Foto: ');
     console.log(foto);
 
     return (
       <View style={styles.container}>
-        <Image source={foto} style={styles.image} />
+        <TouchableHighlight onPress={() => Alert.alert(`Postagem ${id}`)}>
+          <Image source={foto} style={styles.image} />
+        </TouchableHighlight>
       </View>
     );
   }
