@@ -14,13 +14,14 @@ import {
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const userLogado = {
-  name: 'Chrigor Eduardo', 
-  description: 'Os Desenvolvedores(as) Web são especialistas na construção de sites, sistemas ou aplicativos para web, tanto no Front como Back-end. » Infográfico: seu projeto precisa de um(a) Web Designer ou um(a) Desenvolvedor', 
-  foto: { uri: 'https://media.istockphoto.com/photos/profile-view-of-serious-young-man-over-white-background-picture-id534880122' }, 
+  id: 157,
+  name: 'Chrigor Eduardo',
+  description: 'Os Desenvolvedores(as) Web são especialistas na construção de sites, sistemas ou aplicativos para web, tanto no Front como Back-end. » Infográfico: seu projeto precisa de um(a) Web Designer ou um(a) Desenvolvedor',
+  foto: { uri: 'https://media.istockphoto.com/photos/profile-view-of-serious-young-man-over-white-background-picture-id534880122' },
   profissao: "Programmer/Enginner",
-  info: { 
-    followers: "7.4M", 
-    following: "2.1K", 
+  info: {
+    followers: "7.4M",
+    following: "2.1K",
     post: "120",
   }
 }
@@ -49,7 +50,7 @@ class Login extends Component {
     const { login, password } = this.state;
 
     if (login == 'Chrigor' && password == '123') {
-      navigation.navigate('RotasHome', { user: userLogado});
+      navigation.navigate('RotasHome', { user: userLogado });
     } else {
       Alert.alert("Erro de usuário e senha")
     }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   StyleSheet,
@@ -29,6 +29,7 @@ const DATA = [
         'https://da0nhnpjqymn2.cloudfront.net/teste-perfil-ead/images/homem-ilustra-home.png',
     },
     likes: 15,
+    whoLike: [],
     comments: [],
   },
   {
@@ -45,6 +46,7 @@ const DATA = [
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtxeKurgkvyww87wmjLgI7FiQumiWi6tKI1S82LSfUUEk0yMa8oQ&s',
     },
     likes: 5,
+    whoLike: [157],
     comments: [],
   },
   {
@@ -61,6 +63,7 @@ const DATA = [
       uri: 'http://s.glbimg.com/po/tt/f/original/2013/09/18/facebookperfil.jpg',
     },
     likes: 21,
+    whoLike: [],
     comments: [],
   },
 
@@ -78,13 +81,14 @@ const DATA = [
         'https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2019/07/21/indice.jpg',
     },
     likes: 21,
+    whoLike: [157],
     comments: [],
   },
 ];
 
 const dataMoments = [
   {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    id: '1',
     imagePerfil: {
       uri: 'http://s.glbimg.com/po/tt/f/original/2013/09/18/facebookperfil.jpg',
     },
@@ -97,55 +101,55 @@ const dataMoments = [
     },
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145571e723',
+    id: '2',
     imagePerfil: {
       uri:
         'https://image.freepik.com/vetores-gratis/perfil-de-avatar-de-homem-no-icone-redondo_24640-14044.jpg',
     },
   },
   {
-    id: '58694a0f-3da1-471f-bd96-145529d723',
+    id: '3',
     imagePerfil: {
       uri:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPyfr9aV2rHgKiDMBnLzxvv2moMmZt-Mf90ubdUpPgjyRitT9zqQ&s',
     },
   },
   {
-    id: '58694a0f-3da1-471f-bd96-171e29d723',
+    id: '4',
     imagePerfil: {
       uri:
         'http://pm1.narvii.com/6860/e7f3fc65d8d89af1c74b78077d12de14f98e02b8r1-462-462v2_uhq.jpg',
     },
   },
   {
-    id: '58694a0f-3da1-471f-bd45571e29d723',
+    id: '5',
     imagePerfil: {
       uri:
         'https://http2.mlstatic.com/foto-desenho-para-o-seu-perfil-das-redes-sociais-D_NQ_NP_614041-MLB27185740295_042018-O.jpg',
     },
   },
   {
-    id: '58694a0f-3da1-471f96-145571e29d723',
+    id: '6',
     imagePerfil: {
       uri:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2zUqJU9Y-anL_6HNfhp0bqE2ho4cuQTyQZCpCSE4Z8MKcgDoZDg&s',
     },
   },
   {
-    id: '58694a0f-3da1-4-bd96-145571e29d723',
+    id: '7',
     imagePerfil: {
       uri: 'http://s.glbimg.com/po/tt/f/original/2013/09/18/facebookperfil.jpg',
     },
   },
   {
-    id: '58694a0f-3d71f-bd96-145571e29d723',
+    id: '8',
     imagePerfil: {
       uri:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvVgmsrAXP6kp0cpi9-mtXE_RPoti_pEvksmIwftmfWLDlcRGJ&s',
     },
   },
   {
-    id: '58694a1-471f-bd96-145571e29d723',
+    id: '9',
     imagePerfil: {
       uri:
         'http://4.bp.blogspot.com/-Z3wndBhDXoY/VbI71C9DVYI/AAAAAAAADsc/5BoFbl13LAk/s1600/boteco%2Bde%2Boa%2B%25281%2529.jpg',
@@ -162,7 +166,17 @@ class Home extends Component {
     Alert.alert('comment');
   };
 
-  renderPost = ({item}) => {
+  renderPost = ({ item }) => {
+
+    const userLogado = this.props.screenProps;
+    const id = userLogado.user.id;
+    console.log("ID: ", id);
+
+    const { whoLike } = item;
+    console.log("Who like: ", whoLike);
+
+    var color = whoLike.indexOf(id) == -1 ? "white": "#5458F7";
+
     return (
       <View style={styles.containerPost}>
         <View style={styles.cabecalhoPublicacao}>
@@ -182,7 +196,7 @@ class Home extends Component {
         <View style={styles.containerBottomPost}>
           <View style={styles.containerGroupButtons}>
             <ButtonInsta
-              color="white"
+              color={color}
               quantidade={item.likes}
               tipoButton="thumbs-up"
             />
@@ -264,7 +278,7 @@ const styles = StyleSheet.create({
   imagePost: {
     width: '100%',
     height: 300,
-    marginBottom:5,
+    marginBottom: 5,
     alignSelf: 'center',
   },
 
