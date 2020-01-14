@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Text,
@@ -15,8 +15,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import PhotoGrid from '../components/photoGrid';
 
 export default class Profile extends Component {
-  renderPhotoGrid = ({item}) => {
-    return <PhotoGrid foto={item.photoUrl} id={item.id} />;
+  renderPhotoGrid = ({ item }) => {
+    const userLogado = this.props.screenProps;
+    const id = userLogado.user.id;
+
+    return <PhotoGrid item={item} idUser={id} />;
   };
 
   handleClickMessage = () => {
@@ -47,17 +50,17 @@ export default class Profile extends Component {
           </View>
           <View style={styles.containerInfo}>
             <View style={styles.rowOne}>
-              <View style={{alignItems: 'center'}}>
+              <View style={{ alignItems: 'center' }}>
                 <Text style={styles.textInfo}>{post}</Text>
                 <Text style={styles.textLabel}>Posts</Text>
               </View>
 
-              <View style={{alignItems: 'center'}}>
+              <View style={{ alignItems: 'center' }}>
                 <Text style={styles.textInfo}>{followers}</Text>
                 <Text style={styles.textLabel}>Followers</Text>
               </View>
 
-              <View style={{alignItems: 'center'}}>
+              <View style={{ alignItems: 'center' }}>
                 <Text style={styles.textInfo}>{following}</Text>
                 <Text style={styles.textLabel}>Following</Text>
               </View>
